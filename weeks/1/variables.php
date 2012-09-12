@@ -16,9 +16,9 @@ echo LNBREAK_HTML;
 print "{$hello} {$world}";
 echo LNBREAK_HTML;
 
-for( $i = 0; $i < 10; ++$i )
+for( $i = 0; $i < 10; $i++ )
 {
-	print $1 . LNBREAK_HTML;
+	print $i . LNBREAK_HTML;
 }
 
 ?>
