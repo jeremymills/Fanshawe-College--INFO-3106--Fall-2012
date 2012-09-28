@@ -12,7 +12,7 @@
 <form method="get" action="getarray-2.php">
 	<p><label for="search">Search:</label> <input type="text" name="search" id="search" value="" maxlength="45" /></p>
 
-<p><input 
+<p><input type="submit" name="button" value="Button" /></p>
 
 </form>
 

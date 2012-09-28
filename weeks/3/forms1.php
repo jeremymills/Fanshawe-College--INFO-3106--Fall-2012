@@ -39,7 +39,7 @@ if( isset( $_POST['submit']) ) {
 	}
 } 
   
-//print_r($_POST); 
+print_r($_POST); 
 ?>
 <html>
 <head>

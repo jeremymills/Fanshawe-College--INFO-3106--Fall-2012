@@ -1,11 +1,11 @@
 <?php
-/*
+
 print '_GET Array Examples and uses.<br />';
 
 print_r( $_GET );
 
 print '<br /><br />';
-*/
+
 
 function my_page_initializer() {
 	global $site_config;
@@ -40,7 +40,7 @@ function my_page_initializer() {
 
 $site_config = array(
 	'title' => 'My Demo Page',
-	'body' => '<p>Here is my HTML markup for the default page, if none is specified.',
+	'body' => '<p>Here is my HTML markup for the default page, if none is specified.</p>',
 	
 	'show_get' => true
 );
@@ -61,7 +61,7 @@ my_page_initializer();
 <?php } // endif ?>
 
 <ul>
-<li><a href="getarray-1.php" title="Home">Home</a></li>
+<li><a href="getarray-1.php?page=home" title="Home">Home</a></li>
 <li><a href="getarray-1.php?page=about" title="About">About</a></li>
 <li><a href="getarray-1.php?page=contact" title="Contact">Contact</a></li>
 </ul>
