@@ -3,7 +3,7 @@
 ini_set('display_errors', 'on');
 error_reporting(E_ALL | E_STRICT);
 
-echo "Hello world using the echo language construct!<br />";
+echo "Hello World using the echo language construct!<br />";
 
 // short syntax option for printing - not recommended
 /* <?= "hello world"; ?> */
@@ -26,7 +26,7 @@ for( $i = 0; $i < 10; ++$i ) {
 }
 print '<br />';
 
-// Build string variable of 0 to 9, comma sep, no last comma
+// Build string variable of 0 to 9, comma sep
 $string = '';
 for( $i = 0; $i < 10; ++$i ) {
   
@@ -38,23 +38,11 @@ print $string . '<br />';
 // Trim string here so that no end comma is present.
 print rtrim($string, ', ') . '<br />';
 
-// Josh's thoughts - lets see
-$j_string = '';
-$counter = 0;
-for( $i = 0; $i < 10; ++$i ) {
-  
-  $j_string .= $i;
-  if( $i < 9 && ++$counter ) // this counter - used as an example
-  {
-    $j_string .= ', ';
-  }
-}
-print $j_string . ' --> ' . ($counter) . '<br />';
-
 // String concat using tern. operator 
 $string = '';
 for( $i = 0; $i < 10; ++$i )
 {
+	//in-line if-else statement
   $string .= $i . (9 > $i ? ', ' : '');
 }
 print 'T-OP: ' . $string . '<br />';
@@ -64,7 +52,7 @@ $i = 0;
 while( $i < 10 )
 {
   print $i;
-  if( 9 > $i ) // not recommended, please USE curly backets :)
+  if( 9 > $i ) // not recommended, please USE curly brackets :)
     print ', ';
   
   ++$i;

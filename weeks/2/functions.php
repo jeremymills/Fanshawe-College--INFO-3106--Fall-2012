@@ -44,7 +44,7 @@ function print_array(array $array) {
 }
 
 
-print_ln('First and Formost');
+print_ln('First and   Formost');
 print_ln('Hello World');
 print_ln(' Hello world from Foo Bar ... ');
 print '<br /><br />';
@@ -52,7 +52,7 @@ print '<br /><br />';
 $array = array('a' => 1, 'b' => 2,'c' => 4, 'd' => 5, 1024 => 7);
 print_array($array);
 
-print_array('hello wold'); //demo of type hinting..
+print_array('hello world'); //demo of type hinting..
 
 print '<br /><br />';
 

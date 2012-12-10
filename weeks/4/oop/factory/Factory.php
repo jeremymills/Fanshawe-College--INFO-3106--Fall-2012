@@ -5,6 +5,7 @@
  *
  */
 abstract class factory {
+	
 	public static function create($class = null) {
 		if( !$class ) {
 			//handle null value here

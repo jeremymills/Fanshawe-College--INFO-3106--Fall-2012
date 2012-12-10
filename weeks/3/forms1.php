@@ -10,7 +10,7 @@ error_reporting(E_ALL | E_STRICT);
 $fields = array('name'=>'' , 'email'=>'@domain.com', 'phone'=>'', 'message'=>'', 'check'=>'');
 $errors = array();
 $is_success = false;
- 
+
 if( isset( $_POST['submit']) ) {
 	$fields['name'] = isset($_POST['name']) ? strip_tags(stripslashes(trim($_POST['name']))) : $fields['name'];
 	$fields['email'] = isset($_POST['email']) ? strip_tags(stripslashes(trim($_POST['email']))) : $fields['email'];
@@ -18,7 +18,7 @@ if( isset( $_POST['submit']) ) {
 	$fields['phone'] = isset($_POST['phone']) ? strip_tags(stripslashes(trim($_POST['phone']))) : $fields['phone'];
 	$fields['check'] = isset($_POST['check']) ? $_POST['check'] : '';
 	
-	if( '' ==$fields['name'] ) {
+	if( ''==$fields['name'] ) {
 		$errors[] = 'The name field is requird.';
 	}
 	if( ''==$fields['email'] ) {
@@ -74,8 +74,6 @@ else {
 	<p><input type="submit" name="submit" value="submit" /></p>
 
 </form>
- 
- 
  
 </body>
 </html>

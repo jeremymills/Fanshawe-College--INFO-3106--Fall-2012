@@ -9,9 +9,9 @@ echo 'Hello world using the echo language construct!<br />';
 
 //printing numbers 0 - 9, comma sep.
 for( $i = 0; $i < 10; ++$i) {
-	echo $i . ', '; //string concat long form
+	//echo $i . ', '; //string concat long form
 
-	/*	echo "{$i}, "; //string concat short form */
+		echo "{$i}, "; //string concat short form
 }
 echo '<br />';
 

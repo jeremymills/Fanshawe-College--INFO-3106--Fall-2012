@@ -2,9 +2,9 @@
 /**
  * forms-1.php
  */
-
 ini_set('display_errors', 'on');
 error_reporting(E_ALL | E_STRICT);
+
 
 $fields = array('name' => '', 'email' => '@domain.com', 'phone' => '', 'message' => '', 'check' => '');
 $errors = array(); 
@@ -16,7 +16,6 @@ if( isset($_POST['submit']) ) {
   $fields['email'] = isset($_POST['email']) ? stripslashes(trim($_POST['email'])) : $fields['email'];
   $fields['phone'] = isset($_POST['phone']) ? stripslashes(trim($_POST['phone'])) : $fields['phone'];
   $fields['message'] = isset($_POST['message']) ? strip_tags(stripslashes(trim($_POST['message']))) : $fields['message'];
-  
   $fields['check'] = isset($_POST['check']) ? 1 : '';
   
   if( '' == $fields['name'] ) {
@@ -68,17 +67,18 @@ if( isset($_POST['submit']) ) {
 
 <form id="form-1" action="forms-1.php" method="post">
 
-<p><label for="name">Name: *</label> <input type="text" name="name" id="name" value="<?php print $fields['name']; ?>" maxlength="255" size="40" /></p>
+	<p><label for="name">Name: *</label> <input type="text" name="name" id="name" value="<?php print $fields['name']; ?>" maxlength="255" size="40" /></p>
 
-<p><label for="email">Email: *</label> <input type="text" name="email" id="email" value="<?php print $fields['email']; ?>" maxlength="255" size="40" /></p>
+	<p><label for="email">Email: *</label> <input type="text" name="email" id="email" value="<?php print $fields['email']; ?>" maxlength="255" size="40" /></p>
 
-<p><label for="phone">Phone:</label> <input type="text" name="phone" id="phone" value="<?php print $fields['phone']; ?>" maxlength="15" size="40" /></p>
+	<p><label for="phone">Phone:</label> <input type="text" name="phone" id="phone" value="<?php print $fields['phone']; ?>" maxlength="15" size="40" /></p>
+	<!-- <textarea is also another way of <input type="text">
+		your just able to set the columns and rows -->
+	<p><label for="message">Message: *</label> <textarea name="message" id="message" cols="60" rows="10"><?php print $fields['message']; ?></textarea></p>
 
-<p><label for="message">Message: *</label> <textarea name="message" id="message" cols="60" rows="10"><?php print $fields['message']; ?></textarea></p>
+	<p><input type="checkbox" name="check" value="1" id="check" /> <label for="check">Here is my checkbox</label></p>
 
-<p><input type="checkbox" name="check" value="1" id="check" /> <label for="check">Here is my checkbox</label></p>
-
-<p><input type="submit" name="submit" value="Submit" /></p>
+	<p><input type="submit" name="submit" value="Submit" /></p>
 
 </form>
 

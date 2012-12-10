@@ -66,7 +66,7 @@ class MyBaseClass implements IMyInterface {
 	}
 	
 	public function myPreDefinedMethod() {
-		print __METHOD__. '<br />';
+		print __METHOD__ . '<br />';
 	}
 }
 
